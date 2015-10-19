@@ -74,9 +74,11 @@ StackdriverConfig:
 
 rename `filename` to `filename.up`, wait 50ms for open file handles to age out
 and be closed, assert a LOCK_EX to ensure that the last write finished, and hand
-the file contents to the provided upload function.  If no errors, remove the
-processed `filename.up` journal file.  After a successful upload both `filename`
-and `filename.up` will have been removed.
+the file contents to the provided upload function.  It is an error if writes
+take longer than 5 sec to finish.
+
+If no errors, removes the processed `filename.up` journal file.  After a
+successful upload both `filename` and `filename.up` will be gone.
 
 If `filename.up` already exists, the existing file will be uploaded instead (and
 removed), and `filename` will be left as is.
