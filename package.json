@@ -1,0 +1,27 @@
+{
+  "name": "kstats",
+  "version": "1.0.0",
+  "description": "slim, durable stats logger and stackdriver uploader",
+  "main": "index.js",
+  "author": "Kinvey <support@kinvey.com>",
+  "contributors": [ "Andras <andras@kinvey.com>" ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andrasq/node-kstats"
+  },
+  "scripts": {
+    "test": "qunit test-kstats.js"
+  },
+  "keywords": [
+    "durable", "robust", "stats", "logger", "logging", "statistics", "reporting"
+  ],
+  "dependencies": {
+    "qfputs": "1.2.2"
+  },
+  "devDependencies": {
+    "node-qunit": "0.7"
+  },
+  "engines": {
+    "node": ">=0.8"
+  }
+}
