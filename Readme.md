@@ -102,10 +102,11 @@ on whether 10 digits (unix) else javascript (13), converts strings and objects
 with `new Date(timeSpecifier)`, and if no time is specified, the current time
 is used.
 
-### lookUpInstanceId( )
+### KStats.lookUpInstanceId( callback(err, idString) )
 
 Convenience function to return the AWS instance-id of this server.  Uses the
 `ec2metadata` command.
+
 
 
 Related Work
