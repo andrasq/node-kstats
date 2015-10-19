@@ -10,7 +10,10 @@ support built in.
         var QFputs = require('qfputs')
         var KStats = require('kstats')
         var statsLogfile = "/tmp/kstats.log"
-        var statLogger = new KStats({ journal: new QFputs(statsLogfile), prefix: 'test-' })
+        var statLogger = new KStats({
+            journal: new QFputs(statsLogfile),
+            prefix: 'test-'
+        })
 
         statLogger.logStat('heap_used', process.memoryUsage().heapUsed)
 
