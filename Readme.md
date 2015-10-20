@@ -77,8 +77,8 @@ StackdriverConfig:
 
 rename `filename` to `filename.up`, wait 50ms for open file handles to age out
 and be closed, assert a LOCK_EX to ensure that the last write finished, and hand
-the file contents to the provided upload function.  It is an error if writes
-take longer than 5 sec to finish.
+the file contents to the provided upload function.  It is an error if the last
+journal write does not finish and release its lock in 5 seconds.
 
 If no errors, removes the processed `filename.up` journal file.  After a
 successful upload both `filename` and `filename.up` will be gone.
@@ -88,8 +88,8 @@ removed), and `filename` will be left as is.
 
 ### rejectedLines( [arrayToHoldLines] )
 
-Return or specify the array holding the lines that were not uploaded successfully
-to stackdriver.  Lines are rejected for being unparseable or being too old (stats
+Return or specify the array holding the lines that can not uploaded to
+stackdriver.  Lines are rejected for being unparseable or being too old (stats
 must be no more than 2 hours old at the time of upload).  The default is `null`
 to not save the rejected lines.
 
