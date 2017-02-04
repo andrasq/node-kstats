@@ -227,7 +227,7 @@ describe ('KStats', function() {
     it ('_parseJournalStackdriverContents should reject old samples', function(done) {
       var rejects = []
       cut.rejectedLines(rejects)
-      var data = cut._parseJournalStackdriverContents("1 sample 1.0\n" + "#{Date.now()/1000 >>> 0} sample 2.0\n" + "3 sample 3.0")
+      var data = cut._parseJournalStackdriverContents("1 sample 1.0\n" + (Date.now()/1000 >>> 0) + " sample 2.0\n" + "3 sample 3.0")
       assert.equal(rejects.length, 2)
       assert.equal(data.length, 1)
       assert.equal(rejects[0], '1 sample 1.0')
