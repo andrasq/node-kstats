@@ -1,6 +1,6 @@
 {
   "name": "kstats",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "slim, durable stats logger and stackdriver uploader",
   "main": "index.js",
   "author": "Kinvey <support@kinvey.com>",
@@ -16,10 +16,10 @@
     "durable", "robust", "stats", "logger", "logging", "statistics", "reporting"
   ],
   "dependencies": {
-    "qfputs": "1.2.2"
+    "qfputs": "1.7.1"
   },
   "devDependencies": {
-    "node-qunit": "0.7"
+    "qnit": "0.13.0"
   },
   "engines": {
     "node": ">=0.8"
