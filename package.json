@@ -10,7 +10,7 @@
     "url": "git://github.com/andrasq/node-kstats"
   },
   "scripts": {
-    "test": "qunit test-kstats.js"
+    "test": "qnit test-kstats.js"
   },
   "keywords": [
     "durable", "robust", "stats", "logger", "logging", "statistics", "reporting"
